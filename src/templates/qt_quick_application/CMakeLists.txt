@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14 FATAL_ERROR)
 
-project(app)
+project(__APPLICATION_NAME___)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
@@ -12,8 +12,8 @@ endif()
 
 find_package(Qt5 COMPONENTS Core REQUIRED)
 
-add_executable(app
+add_executable(__APPLICATION_NAME___
     main.cpp
 )
 
-target_link_libraries(app Qt5::Core)
+target_link_libraries(__APPLICATION_NAME___ Qt5::Core)

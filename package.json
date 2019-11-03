@@ -3,7 +3,8 @@
 	"publisher": "edenreich",
 	"displayName": "cpp-qt-generator",
 	"description": "This vscode extension helps to generate qt projects quickly",
-	"version": "1.0.0",
+  "version": "1.0.0",
+  "enableProposedApi": true,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/edenreich/vscode-cpp-qt-generator"
@@ -25,24 +26,61 @@
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+    "onView:qtProjectsExplorer",
+    "onLanguage:cpp",
+		"onCommand:extension.createQtWidgetsApplication",
+		"onCommand:extension.createQtConsoleApplication",
+		"onCommand:extension.createQtQuickApplication"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
 				"command": "extension.createQtWidgetsApplication",
-				"title": "C++/Qt: create a new QT widgets application"
+				"title": "create a new QT widgets application",
+				"category": "C++/QT"
 			},
 			{
 				"command": "extension.createQtConsoleApplication",
-				"title": "C++/Qt: create a new QT console application"
+				"title": "create a new QT console application",
+				"category": "C++/QT"
 			},
 			{
 				"command": "extension.createQtQuickApplication",
-				"title": "C++/Qt: create a new QT quick application"
+				"title": "create a new QT quick application",
+				"category": "C++/QT"
 			}
-		]
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "extension.createQtWidgetsApplication"
+				},
+				{
+					"command": "extension.createQtConsoleApplication"
+				},
+				{
+					"command": "extension.createQtQuickApplication"
+				}
+			]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "qtProjectsExplorer",
+          "title": "Qt Projects Explorer",
+          "icon": "images/icons/qt.svg"
+        }
+      ]
+    },
+    "views": {
+      "qtProjectsExplorer": [
+        {
+          "id": "qtProjects",
+          "name": "Qt Projects"
+        }
+      ]
+    }
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run clean && npm run compile && npm run install",

@@ -1,68 +1,68 @@
 {
-	"name": "cpp-qt-generator",
-	"publisher": "edenreich",
-	"displayName": "cpp-qt-generator",
-	"description": "This vscode extension helps to generate qt projects quickly",
+  "name": "cpp-qt-generator",
+  "publisher": "edenreich",
+  "displayName": "cpp-qt-generator",
+  "description": "This vscode extension helps to generate qt projects quickly",
   "version": "1.0.0",
   "enableProposedApi": true,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/edenreich/vscode-cpp-qt-generator"
-	},
-	"icon": "images/icons/cpp_qt.png",
-	"keywords": [
-		"cpp",
-		"qt",
-		"components"
-	],
-	"author": {
-		"name": "Eden Reich",
-		"email": "eden.reich@gmail.com"
-	},
-	"engines": {
-		"vscode": "^1.39.0"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edenreich/vscode-cpp-qt-generator"
+  },
+  "icon": "images/icons/cpp_qt.png",
+  "keywords": [
+    "cpp",
+    "qt",
+    "components"
+  ],
+  "author": {
+    "name": "Eden Reich",
+    "email": "eden.reich@gmail.com"
+  },
+  "engines": {
+    "vscode": "^1.39.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
     "onView:qtProjectsExplorer",
     "onLanguage:cpp",
-		"onCommand:extension.createQtWidgetsApplication",
-		"onCommand:extension.createQtConsoleApplication",
-		"onCommand:extension.createQtQuickApplication"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.createQtWidgetsApplication",
-				"title": "create a new QT widgets application",
-				"category": "C++/QT"
-			},
-			{
-				"command": "extension.createQtConsoleApplication",
-				"title": "create a new QT console application",
-				"category": "C++/QT"
-			},
-			{
-				"command": "extension.createQtQuickApplication",
-				"title": "create a new QT quick application",
-				"category": "C++/QT"
-			}
-		],
-		"menus": {
-			"commandPalette": [
-				{
-					"command": "extension.createQtWidgetsApplication"
-				},
-				{
-					"command": "extension.createQtConsoleApplication"
-				},
-				{
-					"command": "extension.createQtQuickApplication"
-				}
-			]
+    "onCommand:extension.createQtWidgetsApplication",
+    "onCommand:extension.createQtConsoleApplication",
+    "onCommand:extension.createQtQuickApplication"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.createQtWidgetsApplication",
+        "title": "create a new QT widgets application",
+        "category": "C++/QT"
+      },
+      {
+        "command": "extension.createQtConsoleApplication",
+        "title": "create a new QT console application",
+        "category": "C++/QT"
+      },
+      {
+        "command": "extension.createQtQuickApplication",
+        "title": "create a new QT quick application",
+        "category": "C++/QT"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.createQtWidgetsApplication"
+        },
+        {
+          "command": "extension.createQtConsoleApplication"
+        },
+        {
+          "command": "extension.createQtQuickApplication"
+        }
+      ]
     },
     "viewsContainers": {
       "activitybar": [
@@ -81,18 +81,18 @@
         }
       ]
     }
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run clean && npm run compile && npm run install",
-		"clean": "rm -rf out/*",
-		"compile": "tsc -p ./",
-		"install": "cp -R src/templates out/templates",
-		"watch": "tsc -watch -p ./"
-	},
-	"devDependencies": {
-		"@types/node": "^10.12.21",
-		"@types/vscode": "^1.39.0",
-		"tslint": "^5.12.1",
-		"typescript": "^3.3.1"
-	}
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run clean && npm run compile && npm run install",
+    "clean": "rm -rf out/*",
+    "compile": "tsc -p ./",
+    "install": "cp -R src/templates out/templates",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.39.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1"
+  }
 }

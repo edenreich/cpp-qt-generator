@@ -1,8 +1,23 @@
 {
 	"name": "cpp-qt-generator",
+	"publisher": "edenreich",
 	"displayName": "cpp-qt-generator",
-	"description": "This extension helps to generate qt project on vscode quickly",
+	"description": "This vscode extension helps to generate qt projects quickly",
 	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/edenreich/vscode-cpp-qt-generator"
+	},
+	"icon": "images/qt.png",
+	"keywords": [
+		"cpp",
+		"qt",
+		"components"
+	],
+	"author": {
+		"name": "Eden Reich",
+		"email": "eden.reich@gmail.com"
+	},
 	"engines": {
 		"vscode": "^1.39.0"
 	},
@@ -30,20 +45,16 @@
 		]
 	},
 	"scripts": {
-		"vscode:prepublish": "npm run compile",
+		"vscode:prepublish": "npm run clean && npm run compile && npm run install",
+		"clean": "rm -rf out/*",
 		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile"
+		"install": "cp -R src/templates out/templates",
+		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.6",
 		"@types/node": "^10.12.21",
 		"@types/vscode": "^1.39.0",
-		"glob": "^7.1.4",
-		"mocha": "^6.1.4",
-		"typescript": "^3.3.1",
 		"tslint": "^5.12.1",
-		"vscode-test": "^1.2.0"
+		"typescript": "^3.3.1"
 	}
 }

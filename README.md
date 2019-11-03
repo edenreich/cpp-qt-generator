@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/edenreich/vscode-cpp-qt-generator/master/images/cpp_qt.png" title="C++ Qt Projects Generator" alt="C++ Qt Projects Generator">
+<img src="https://raw.githubusercontent.com/edenreich/vscode-cpp-qt-generator/master/images/icons/cpp_qt.png" title="C++ Qt Projects Generator" alt="C++ Qt Projects Generator">
 
 # CPP-QT-Generator VS-Code Extension
 

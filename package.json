@@ -9,7 +9,7 @@
 		"type": "git",
 		"url": "https://github.com/edenreich/vscode-cpp-qt-generator"
 	},
-	"icon": "images/cpp_qt.png",
+	"icon": "images/icons/cpp_qt.png",
 	"keywords": [
 		"cpp",
 		"qt",
